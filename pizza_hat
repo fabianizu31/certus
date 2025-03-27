@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA PIZZERIA - CERTUS</title>
+
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: brown;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1{
+            margin:0
+        }
+        nav{
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a{
+            margin:0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        nav a.hover{
+            color:#b99918;
+        }
+        .pizza-item {
+            background-color:white;
+            padding: 20px;
+            margin: 0 10px;
+            border-radius:8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width:250px;
+            text-align:center;
+        }
+        .pizza-ite img{
+            width: 100%;
+            border-radius: 8px;
+        }
+        .pizza-item h3{
+            margin: 10px 0;
+        }
+        .pizza-item p{
+            color: #7f8c7f;
+        }
+        footer{
+             background-color: #b99918;
+             color: white;
+             text-align: center; 
+             padding: 15px;
+             margin-top: 40px;
+            }
+        section{
+            display:flex;
+            justify-content:space-around;
+            margin: 40px 0;
+            flex-wrap:wrap;
+        }
+        img{
+            width: 100%;
+            border-radius:8px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>La pizzeria - certurs</h1>
+        <hr>
+    <nav>
+        <a href="#"> Inicio</a> 
+        <a href="#"> Menu</a> 
+        <a href="#"> Contacto</a> 
+    </nav>
+    </header>
+     <section class = "Menu"> 
+        <div class = "pizza-item">
+            <img src="../clase2/img/great-food.jpg" alt="pizza mozzarella">
+        <h3>pizza hat </h3>
+        <p>tomate,mozzrella y albaca</p>
+        <p><strong>Precio: $7.99</strong></p>
+        </div>
+
+        <div class = "pizza-item">
+            <img src="img/sddefault.jpg" alt="pizza hawayana">
+        <h3>pizza hat </h3>
+        <p>piña,mozzrella y tomate</p>
+        <p><strong>Precio: $8.99</strong></p>
+         </div>
+
+        <div class = "pizza-item">
+            <img src="img/pepperoni-ham.jpg" alt="pizza peperoni">
+        <h3>pizza hat </h3>
+        <p>tomate,mozzrella y cherry</p>
+        <p><strong>Precio: $10.99</strong></p>
+        </div>
+     </section>
+
+<footer>
+    <p>&copy; 2025 la pizzeria | Todos los derechos reservados</p>
+</footer>
+</body>
+</html>
