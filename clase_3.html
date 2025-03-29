@@ -12,7 +12,7 @@
             font-family: arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #ca2020d3;
         }
         /*contedor principal*/
         .banner-container{
@@ -23,8 +23,13 @@
         }
         /*contenedor de imagenes*/
         .banner-imagenes{
-            display: flex;
+            display: flow-root;
             animation: scrollBanner 15s linear infinite;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
         }
         /*animacion de desplazamiento de forma horizontal*/
         @keyframes scrollBanner {
@@ -32,21 +37,17 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateX(100%);
             }
         }
-        nav{
-            text-align: center;
-            margin-top: 10px;
-            }
             /*estilos para el texto de bienvenida*/
             .Wellcome-text{
                 background-color: #333;
                 font-family: Century Gothic;
                 text-align: center;
-                font-size: 36px;
+                font-size: 80px;
                 margin-top: 20px;
-                color: rgb(250, 207, 17);
+                color: rgb(255, 255, 255);
             }
             footer{
                 background-color: #333;
@@ -70,12 +71,33 @@
                 border: none;
                 border-radius: 8px;
             }
+            .video h2{
+                color: #f4f4f4;
+            }
+            nav {
+                text-align: center;
+                margin-top: 10px;
+            }
 
+            nav a {
+                margin: 0 15px;
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                font-size: 18px;
+            }
     </style>
 </head>
 <body>
     <header>
-        <h1 class ="Wellcome-text"> "-Bienvenido a Monarch-" </h1>
+        <h1 class ="Wellcome-text"> "-BIENVENIDO A MONARCH-" </h1>
+        <hr>
+        <nav>
+            <a href="#">Monarch</a>
+            <a href="#">Menu</a>
+            <a href="#">Zapatillas</a>
+            <a href="#">Hogar</a>
+        </nav>
     </header>
         <!--Banner de imagees en movimieto-->
         <div class = "banner-container">
@@ -83,14 +105,21 @@
             <img src="../img/zapas_nike.webp" alt="nike one_fire">
             <img src="../img/zapas_humbro.webp" alt="humbro basic">
             <img src="../img/zapas_club.webp" alt="club nigh">
-            <img src="../img/zapas_ranw.webp" alt="basic ranw"> <!--descripcion pequeña de la imagen-->
+            <img src="../img/zapas_ranw.webp" alt="basic ranw">
+            <img src="../img/saucony shadow.webp" alt="basic ranw"> 
+            <img src="../img/saucony.webp" alt="basic ranw"> 
+            <img src="../img/urban-white.webp" alt="basic ranw"> 
+            <img src="../img/nike-black.webp" alt="basic ranw"> 
+            <img src="../img/converse.webp" alt="basic ranw"> 
+            <img src="../img/vans-classic.webp" alt="basic ranw"> 
+            <!--descripcion pequeña de la imagen-->
         </div>
     </div>
 
     <br>
     <section class="video">
         <h2>Descrubre como prepramos nuestras zapatillas</h2>
-        <iframe src="https://youtu.be/AtACbhGGwK4?si=gigKdv4Us21fZ8LO" title="proceso de zapatillas">
+        <iframe src="https://www.youtube.com/embed/AtACbhGGwK4?si=NZ_asybGTkuHylPT" title="proceso de zapatillas">
             
         </iframe>
     </section>
