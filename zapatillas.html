@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>monarch</title>
+    <style>
+        body{
+            font-family: Arial,sans-serif;
+            background-color: #f4f4f4;
+            margin:0;
+            padding:0;
+         }            
+        header{
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+         }
+        h1{
+            margin: 0;  
+         }
+        nav{
+            text-align: center;
+            margin-top: 10px;
+         }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+         }
+        nav a.hover{
+            color: #f1c40f;
+         }
+        .pizza-item{
+            background-color: white;
+            padding: 20px;
+            margin: 0 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0,1);
+            width: 250px;
+         }
+         img{
+            width: 100%;
+            border-radius: 8px;
+        }
+         .pizza-item h3{
+            margin: 10px 0;
+         }
+         .pizza-item p{
+            color: #7f8c8d;
+         }
+         footer{
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+         }
+         section{
+            display:flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            flex-wrap: wrap;
+         }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <h1>LA PIZZERIA</h1>
+        <hr>
+    <nav>
+        <a href="#">Monarch</a>
+        <a href="#">Menu</a>
+        <a href="#">Zapatillas</a>
+        <a href="#">Hogar</a>
+    </nav>
+    </header>
+<section class="menu">
+    <div class="pizza-item">
+        <img src="../clase2/picture/pizza-margarita.jpg" alt="Pizza Margarita">
+    <h3>Pizza Margarita</h3>
+    <p>Tomate, Mozarella y Albaca</p>
+    <p><strong>Precio $7.99</strong></p>
+    </div>
+
+    <div class="pizza-item">
+        <img src="../CLASE2/picture/pizza vegetariana.jfif" alt="Pizza Vegetariana">
+    <h3>Pizza Vegetariana</h3>
+    <p>Tomate, Mozarella y Vegetales frescos</p>
+    <p><strong>Precio $8.99</strong></p>
+    </div>
+
+    <div class="pizza-item">
+        <img src="../CLASE2/picture/pizza pepperoni.png" alt="Pizza Pepperoni">
+    <h3>Pizza Pepperoni</h3>
+    <p>Pepperoni, Tomate y Mozarella</p>
+    <p><strong>Precio $10.99</strong></p>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2025 La Pizzeria | Todos los Derechos Reservados</p>
+</footer>
+
+</body>
+</html>
