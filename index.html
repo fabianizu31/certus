@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANNER DESPLEGABLE</title>
+    <style>
+        body{
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000d3;
+        }
+        /*contedor principal*/
+        .banner-container{
+            width: 100%;
+            overflow:auto;
+            position:flex;
+            background-color:  rgb(208, 208, 207);
+            animation: scrollBanner 50s linear infinite;
+        }
+        /*contenedor de imagenes*/
+        .banner-imagenes2 {
+            display:inline-flexbox;
+            animation: scrollBanner 300s linear infinite ;
+            -webkit-animation: scroll 300s linear infinite;
+            width: calc(200px);
+        }
+        .div-item {
+            background-color:white;
+            padding: 20px;
+            margin: 0 10px;
+            border-radius:8px;
+            box-shadow: 0 4px 6px rgb(255, 255, 255);
+            width:250px;
+            text-align:center;
+        }
+        section{
+            display:flex;
+            justify-content:flex-start;
+            margin: 40px 0;
+            flex-wrap:wrap;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+        }
+        
+        /*animacion de desplazamiento de forma horizontal*/
+        @keyframes scrollBanner {
+            0% {
+
+                transform: translateX(0);
+            }
+            100% {
+
+                transform: translateX(100%);
+            }
+        }
+            /*estilos para el texto de bienvenida*/
+            .Wellcome-text{
+                background-color: #333;
+                font-family: Century Gothic;
+                text-align: center;
+                font-size: 80px;
+                margin-top: 20px;
+                color: rgb(255, 255, 255);
+            }
+            footer{
+                background-color: #ffffff;
+                color: rgb(0, 0, 0);
+                text-align: center;
+                padding: 10px 0;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+            footer a {
+                color: rgb(255, 255, 255)
+            }
+            .video{
+                text-align: center;
+                margin: 40px;
+            }
+            .video iframe{
+                width: 80%;
+                height: 500px;
+                border: none;
+                border-radius: 8px;
+            }
+            .video h2{
+                color: #f4f4f4;
+            }
+            nav {
+                text-align: center;
+                margin-top: 10px;
+            }
+            nav a {
+                margin: 0 15px;
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                font-size: 18px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class ="Wellcome-text"> "-BIENVENIDO A MONARCH-" </h1>
+        <hr>
+        <nav>
+            <a href="#">Monarch</a>
+            <a href="#">Menu</a>
+            <a href="#">Zapatillas</a>
+            <a href="#">Hogar</a>
+        </nav>
+    </header>
+    <!--Animacion de las imagenes-->
+    <div class = "banner-container">
+    <section class = "zapatillas">
+        <div class="banner-imagenes2">
+            <img src="../html_web/marcas/adidas_blanco.jpg" alt="Grand Court Cloudfoam Comfort">
+            <h3>Zapatillas adidas Grand Court Cloudfoam Comfort</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $732.99</strong></p>
+
+            <img src="../html_web/marcas/adidas_verde.jpg" alt="Originals">
+            <h3>Zapatillas Samba adidas Originals - Verde adidas</h3>
+            <p>Oferta</p>
+            <p><strong>Precio: $273.99</strong></p>
+
+            <img src="../html_web/marcas/deportivas_adidas_negro.jpg" alt="RUNNING">
+            <h3>ZAPATILLAS RUNNING ADIDAS HOMBRE RUNFALCON 5.0</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $674.99</strong></p>
+        </div>
+    
+        <div class="banner-imagenes2">
+            <img src="../html_web/marcas/converse_botin.jpg" alt="Vintage Canvas">
+            <h3>Converse Chuck 70 Vintage Canvas</h3>
+            <p>Oferta</p>
+            <p><strong>Precio: $185.99</strong></p>
+
+            <img src="../html_web/marcas/converse_log_verde.jpg" alt="Converse Star Player 76"> 
+            <h3>Zapatillas Converse Star Player 76 100% Original | A06112</h3>
+            <p>Oferta</p>
+            <p><strong>Precio: $354.99</strong></p>
+
+            <img src="../html_web/marcas/converse_plomo.jpg" alt="Converse TOBIN"> 
+            <h3>Bambas Converse TOBIN A07510C Gris</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $621.99</strong></p>
+        </div>
+    
+        <div class="banner-imagenes2">
+            <img src="../html_web/marcas/nike_balnco_celeste.jpg" alt="Air Force 1"> 
+            <h3>Zapatillas Air Force 1 LV8 Blancas - Foot on Mars</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $621.99</strong></p>
+
+            <img src="../html_web/marcas/nike_balnco_rosa.jpg" alt="AIR FORCE 1 WILD"> 
+            <h3>ZAPATILLAS W AIR FORCE 1 WILD</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $954.99</strong></p>
+
+            <img src="../html_web/marcas/nike_rosa.jpg" alt="Nike Air Force 1 07 LX"> 
+            <h3>Zapatillas Mujer Nike Air Force 1 07 LX - InStore</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $635.99</strong></p>
+        </div>
+    
+        <div class="banner-imagenes2">
+            <img src="../html_web/marcas/puma_blanco_verde.jpg" alt="Urbano Hombre">
+            <h3>Zapatilla Urbano Hombre Puma 24.395016</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $721.99</strong></p>
+
+            <img src="../html_web/marcas/puma_crema.jpg" alt="HERITAGE PALERMO"> 
+            <h3>Zapatillas PUMA HERITAGE PALERMO 11 - The Box</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $456.99</strong></p>
+
+            <img src="../html_web/marcas/puma_negro _blanco.jpg" alt="Caven 2.0"> 
+            <h3>Zapatillas Urbano Mujer Puma Caven 2.0</h3>
+            <p>Oferta</p>
+            <p><strong>Precio: $205.99</strong></p>
+        </div>
+    
+        <div class="banner-imagenes2">
+            <img src="../html_web/marcas/r18_blanco.jpg" alt="Unisex R18 R18"> 
+            <h3>Zapatillas Unisex R18 R18-QY026 (35-40) Blanco</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $653.99</strong></p>
+
+            <img src="../html_web/marcas/r18_blanco_verde.jpg" alt="Urbano"> 
+            <h3>R18 - URBANO</h3>
+            <p>Oferta</p>
+            <p><strong>Precio: $357.99</strong></p>
+
+            <img src="../html_web/marcas/r18_depor_negro.jpg" alt="RUNNING"> 
+            <h3>R18 - RUNNING</h3>
+            <p>Oferta</p>
+            <p><strong>Precio: $159.99</strong></p>
+        </div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="banner-imagenes2">
+            <img src="../html_web/marcas/adidas_blanco.jpg" alt="Grand Court Cloudfoam Comfort">
+            <h3>Zapatillas adidas Grand Court Cloudfoam Comfort</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $732.99</strong></p>
+
+            <img src="../html_web/marcas/adidas_verde.jpg" alt="Originals">
+            <h3>Zapatillas Samba adidas Originals - Verde adidas</h3>
+            <p>Oferta</p>
+            <p><strong>Precio: $273.99</strong></p>
+
+            <img src="../html_web/marcas/deportivas_adidas_negro.jpg" alt="RUNNING">
+            <h3>ZAPATILLAS RUNNING ADIDAS HOMBRE RUNFALCON 5.0</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $674.99</strong></p>
+        </div>
+
+            <div class="banner-imagenes2">
+            <img src="../html_web/marcas/converse_botin.jpg" alt="Vintage Canvas">
+            <h3>Converse Chuck 70 Vintage Canvas</h3>
+            <p>Oferta</p>
+            <p><strong>Precio: $185.99</strong></p>
+
+            <img src="../html_web/marcas/converse_log_verde.jpg" alt="Converse Star Player 76"> 
+            <h3>Zapatillas Converse Star Player 76 100% Original | A06112</h3>
+            <p>Oferta</p>
+            <p><strong>Precio: $354.99</strong></p>
+
+            <img src="../html_web/marcas/converse_plomo.jpg" alt="Converse TOBIN"> 
+            <h3>Bambas Converse TOBIN A07510C Gris</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $621.99</strong></p>
+        </div>
+
+        <div class="banner-imagenes2">
+            <img src="../html_web/marcas/nike_balnco_celeste.jpg" alt="Air Force 1"> 
+            <h3>Zapatillas Air Force 1 LV8 Blancas - Foot on Mars</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $621.99</strong></p>
+
+            <img src="../html_web/marcas/nike_balnco_rosa.jpg" alt="AIR FORCE 1 WILD"> 
+            <h3>ZAPATILLAS W AIR FORCE 1 WILD</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $954.99</strong></p>
+
+            <img src="../html_web/marcas/nike_rosa.jpg" alt="Nike Air Force 1 07 LX"> 
+            <h3>Zapatillas Mujer Nike Air Force 1 07 LX - InStore</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $635.99</strong></p>
+        </div>
+
+        <div class="banner-imagenes2">
+            <img src="../html_web/marcas/puma_blanco_verde.jpg" alt="Urbano Hombre">
+            <h3>Zapatilla Urbano Hombre Puma 24.395016</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $721.99</strong></p>
+
+            <img src="../html_web/marcas/puma_crema.jpg" alt="HERITAGE PALERMO"> 
+            <h3>Zapatillas PUMA HERITAGE PALERMO 11 - The Box</h3>
+            <p>Exclusive time</p>
+            <p><strong>Precio: $456.99</strong></p>
+
+            <img src="../html_web/marcas/puma_negro _blanco.jpg" alt="Caven 2.0"> 
+            <h3>Zapatillas Urbano Mujer Puma Caven 2.0</h3>
+            <p>Oferta</p>
+            <p><strong>Precio: $205.99</strong></p>
+        </div>
+    </section>
+    </div>
+
+    <br>
+    <section class="video">
+        <h2>Descrubre como prepramos nuestras zapatillas</h2>
+        <iframe src="https://www.youtube.com/embed/AtACbhGGwK4?si=NZ_asybGTkuHylPT" title="proceso de zapatillas"></iframe>
+    </section>
+
+    <footer>
+        <!--colocamos el copyright-->
+        <p> &copy; 2025 tienda monarch style - todos los derechos reservados> </p>
+        <!--Añadimos numero de cotacto-->
+        <!--el compo target, me permite crear una nueva pestaña-->
+        <p><strong>Contacto:</strong> <a href="https://wa.link/ms5aw5" target="_blank">999-564-527</a></p>
+    </footer>
+    
+</body>
+</html>
