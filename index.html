@@ -7,30 +7,59 @@
 
     <style>
         body{
-            font-family: 'Times New Roman', Times, serif;
-            background-color: #0000009a;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            background-color: #ffffff;
             place-content: left;
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
         }
         body{
             display: grid;
-            place-content: left;
+            place-content: linear;
             gap: 8px;
         }
         header{
-            background-color: #ffffff;
-            color: rgb(0, 0, 0);
+            background-color: #000000;
+            color: rgb(255, 255, 255);
             text-align: center;
             padding: 20px 0;
         }
-        img{ 
-        width: 250px;
-        height: 250px;
-        object-fit:inherit;
-        border-radius: 16px;
-        align-content: left;
+        hr{
+            background-color: #000000;
         }
+        .catalogo img{
+            width: 400px;
+            height: 400px;
+            text-align: right;
+        }
+        .nike{
+            margin-bottom: 15px;
+            text-align:left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .nike-label{
+            display: block;
+            margin-bottom: 5px;
+        }
+        .nike input, .nike select, .nike textarea{
+            width: 15%;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+
+        }
+        .nike button{
+            background-color: rgb(93, 185, 7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .nike button:hover{
+            background-color: #ffc400;
+        }
+
         @keyframes show{
         from {
             opacity: 0; scale: 100%;
@@ -39,398 +68,280 @@
             opacity: 1; scale: 100%;
         }
         }
-        img{ 
-        view-timeline-name: --reveal;
-
-        animation-name: show;
-        animation:-fill-mode: both ;
-
-        animation-timeline: --reveal;
-        animation-fill-mode: entry 100% cover 0%;
-        }
         nav a{
             margin:0 15px;
             text-decoration: none;
-            color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             font-size: 18px;
         }
+
         nav a.hover{
             color:#ffffff;
         }
-        .item {
-            background-color:rgba(50, 48, 48, 0.887);
-            padding: 20px;
-            margin: 0 10px;
-            border-radius:8px;
-            box-shadow: 0 4px 6px rgb(0, 0, 0);
-            width:250px;
-            text-align:center;
+
+        .zoom{
+            transition: transform 0.3s ease-in-out;
         }
-        footer{
-            background-color: #000000fc;
-            color: rgb(0, 0, 0);
+        .zoom:hover{
+            transform: scale(1.5); /*Aumente el tamaño un 50%*/
+        }
+        .zoom section{
+            width: 50%;
+            height: 50%;
+        }
+
+        footer, p{
+            background-color: #000000fe;
+            color: rgb(253, 253, 253);
             text-align: center; 
-            padding: 15px 0;
+            padding: 10px 0;
             margin-top: 40px;
             }
+        a, h1{
+            color: #ffffff;
+        }
         section{
             display:flex;
             justify-content:space-around;
             margin: 40px 0;
             flex-wrap:wrap;
+            align-content: left;
+            
         }
-        h3, p{
+        p{
             margin: 10px 0;
             color: #ffffff;
+            background-color: #000000;
         }
-
-
-
-
-        /*contedor principal*/
-        .iterable{
-            width: 100%;
-            overflow:hidden;
-            position:horizontal;
-            background-color:  rgba(50, 48, 48, 0.887);
-            animation: scrollBanner 50s linear infinite;
-            justify-content: left;
-        }
-        /*contenedor de imagenes*/
-        .banner-imagenes2 {
-            display:flow-root;
-            animation: scrollBanner 50s linear infinite ;
-            -webkit-animation: scroll 50s linear infinite;
-            max-width: 600px;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        .irterable{
-            background-color: rgb(255, 255, 255);
-            padding:20px;
-            margin:0 10px ;
-            border-radius:8px solid rgb(0, 0, 0) ;
-            width:200px;
-            text-align: left;
-        }
-        img{
-            width: 150px;
-            height: 150px;
-            border-radius: 10px;
-        }
-        
-        /*animacion de desplazamiento de forma horizontal*/
-        @keyframes scrollBanner {
-            0% {
-
-                transform: translateX(0);
-            }
-            100% {
-
-                transform: translateX(100%);
-            }
-        }
-
-
-
-
-        /*contedor principal*/
-        .iterable2{
-            width: 100%;
-            overflow:hidden;
-            position:horizontal;
-            background-color:  rgba(50, 48, 48, 0.887);
-            animation: scrollBanner 50s linear infinite;
-        }
-        /*contenedor de imagenes*/
-        .zapo2 {
-            display:flow-root;
-            animation: scrollBanner 50s linear infinite ;
-            -webkit-animation: scroll 50s linear infinite;
-            max-width: 600px;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        .irterable2{
-            background-color: rgb(255, 255, 255);
-            padding:20px;
-            margin:0 10px ;
-            border-radius:8px solid rgb(0, 0, 0) ;
-            width:200px;
-            text-align: left;
-        }
-        img{
-            width: 150px;
-            height: 150px;
-            border-radius: 10px;
-        }
-        
-        /*animacion de desplazamiento de forma horizontal*/
-        @keyframes scrollBanner {
-            0% {
-
-                transform: translateX(0);
-            }
-            100% {
-
-                transform: translateX(100%);
-            }
-        }
-        h2, h4 {
-            text-align:inherit;
-            color: #ffffff;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: medium;
-            inline-size:auto;
-        }
-
-
-
 
         .video{
-                text-align: center;
-                margin: 40px;
-            }
+        text-align: center;
+        margin: 40px;
+        }
         .video iframe{
-            width: 80%;
+            width: 100%;
             height: 500px;
             border: none;
             border-radius: 8px;
         }
         .video h2{
-            color: #f4f4f4;
+            color: #000000;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
-    </style>
-<!--------------------------------------------------------------------------------->
+        img{
+            width: 200px;
+            height: 100px;
+            border-radius: 0px;
+        }
+        head-logo{
+            padding: 0%;
+            margin: 0%;
+            background-color: #000000;
+        }
+        .registrate {
+            background-color: #ffff00;
+            font-family:'Times New Roman', Times, serif;
+        }
+/*contedor principal*/
+/**.iterable2{
+    width: 100%;
+    overflow:hidden;
+    position:relative;
+    background-color:  rgba(0, 0, 0, 0.887);
+    animation: scrollBanner 50s linear infinite;
+    justify-content:flex-start;
+}
+/*contenedor de imagenes*/
+/**.banner-imagenes3 {
+    display:flow-root;
+    animation: scrollBanner 50s linear infinite ;
+    -webkit-animation: scroll 50s linear infinite;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 0px;
+}
+.irterable2{
+    background-color: rgb(255, 255, 255);
+    padding:20px;
+    margin:0 10px ;
+    width:250px;
+    text-align: center;
+}**/
+/*animacion de desplazamiento de forma horizontal*/
+/**@keyframes scrollBanner {
+    0% {
+
+        transform: translateX(0);
+    }
+    100% {
+
+        transform: translateX(100%);
+    }
+}**/
+</style>
 </head>
-<!--------------------------------------------------------------------------------->
 <body>
+<head>
+<section class="logo">
+    <!--<marquee>-->
+        FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP    
+    </marquee>
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="log">
+    <!--<marquee>-->
+        FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP - FOOTSHOP 
+    </marquee>
+</head>
+</section>
+<!--/** segundo header**/-->
     <header>
-        <h1><img src="../marcas/shoes-logo-design-sneakers-logo-design-vector.jpg" alt="logo"> <h1 strong>"-Monarca-"</strong></h1>
-        <hr>
-    <nav>
-        <a href="#"> Inicio</a> 
-        <a href="#"> Menu</a> 
-        <a href="#"> Contacto</a> 
-        <!--nombre del producto-->
-        <a href="#"></a><div class="nike">
-            <label for="producto">Nombre del producto</label> 
-            <input type="text" id="producto" name="producto" required>
-        </div></a>
-    </nav>
+    <div class="menu">
+        <nav>
+                <label for="producto">Nombre del producto</label> 
+                <input type="text" id="producto" name="producto" required>            
+            <a href="#"> Inicio</a> 
+            <a href="#"> Mujer</a> 
+            <a href="#"> Hombre</a> 
+            <a href="#"> Niños</a> 
+            <a href="#"> Deportes</a> 
+            <a href="#"> Contacto</a> 
+            <!--nombre del producto-->
+            <a href="#"></a>
+        </nav>
+    </div>        
     </header>
-<!--------------------------------------------------------------------------------->
-<section class= "iterable">
-    <div class="banner-imagenes2">
-        <img src="../marcas/adidas_blanco.jpg" alt="zap">
-        <img src="../marcas/adidas_verde.jpg" alt="zap">
-        <img src="../marcas/deportivas_adidas_negro.jpg" alt="zap">
-        <img src="../marcas/converse_botin.jpg" alt="zap">
-        <img src="../marcas/converse_plomo.jpg" alt="zap"> 
-        <img src="../marcas/converse_log_verde.jpg" alt="zap"> 
-        <img src="../marcas/nike_balnco_celeste.jpg" alt="zap"> 
-        <img src="../marcas/nike_balnco_rosa.jpg" alt="zap"> 
-        <img src="../marcas/nike_rosa.jpg" alt="zap"> 
-        <img src="../marcas/puma_blanco_verde.jpg" alt="zap">
-        <img src="../marcas/puma_crema.jpg" alt="zap"> 
-        <img src="../marcas/puma_negro _blanco.jpg" alt="zap"> 
-        <img src="../marcas/r18_blanco.jpg" alt="zap"> 
-        <img src="../marcas/r18_blanco_verde.jpg" alt="zap"> 
-        <img src="../marcas/r18_depor_negro.jpg" alt="zap"> 
-    </div>
+    <hr>
+<section class = "catalogo"> 
+    <div class="catalogo">
+        <img src="../html_web/marcas/Zapatillas_Superstar_II_Blanco_JH5469_01_standard.avif" class="zoom" width="300">
+        <img src="../html_web/marcas/Zapatillas_Superstar_II_Blanco_JH5469_02_standard.avif" class="zoom" width="300">
+        <div class="catalogo">
+        <img src="../html_web/marcas/Zapatillas_Superstar_II_Blanco_JH5469_03_standard.avif" class="zoom" width="300">
+        <img src="../html_web/marcas/Zapatillas_Superstar_II_Blanco_JH5469_04_standard.avif" class="zoom" width="300">
+    
+    <form action="#" method="post">
+        <!--categoria del producto (combo box)-->
+        <div class="nike">
+            <!--nombre del producto-->
+            <label form="categoria">Talla del producto</label>
+            <select id="categoria" name="categoria" required>
+                <option value="seleccione">US H 15 / M 16</option>
+                <option value="seleccione">US H 16 / M 16.5</option>
+                <option value="seleccione">US H 17 / M 18</option>
+                <option value="seleccione">US H 18 / M 19</option>
+                <option value="seleccione">US H 19 / M 20</option>
+            </select>
+        </div>
+        <!--precios-->
+        <div class="nike">
+            <label form="precio">Cantidad de unidades</label>
+            <input type="number" id="precio" name="precio" min="0" required>
+        </div>
+        <!--disponibilidad-->
+        <div class="nike">
+            <label form="disponibilidad">En reuso?</label><br>
+            SI <input type="radio" id="no-disponible" name="disponibilidad" value="si"required>
+            NO <input type="radio" id="no-disponible" name="disponibilidad" value="no"required>
+        </div>
+        <!--porductos destacados-->
+        <div class="nike">
+            <label form="destacado">entrega a domicilio?</label>
+            <input type="checkbox" id="destacado" name="destacado">
+        </div>
+
+        <!--fecha de registro-->
+        <div class="nike">
+            <label form="fecha-registro">Fechas de entrega</label>
+            <input type="date" id="fecha-registro" name="fecha-registro" required>
+        </div>
+        <!--boton de envio-->
+        <div class="nike">
+            <button type="submit">registrar producto</button> 
+        </div>
+    <div/>
+    </form>
+    <!--<div class="descripcion">
+        <h2>Zapatillas adidas Grand Court Cloudfoam Comfort</h2>
+        <h3>***PRODUCTO UNISEX***</h3>
+        <h3>Antes de escoger tu talla te recomendamos revisar la 
+            equivalencia en la guia de tallas, H: Hombre | M: Mujer.</h3>
+        <h2>Tallas</h2>
+        <hr>
+        <h4>US H 15 / M 16<h4/>
+        <h4>US H 16 / M 16.5<h4/>
+        <h4>US H 17 / M 18<h4/>
+        <h4>US H 18 / M 19<h4/>
+        <h4>US H 19 / M 20<h4/>    
+        <hr>
+        <h5><strong>Precio: $732.99</strong></h5>            
+        </div>-->
+<hr>
 </section>
-<!--------------------------------------------------------------------------------->
-<section class = "Menu"> 
-    <div class="item">
-        <img src="../marcas/adidas_blanco.jpg" alt="zapo">
-        <h3>Zapatillas adidas Grand Court Cloudfoam Comfort</h3>
-        <p>Exclusive time</p>
-        <p><strong>Precio: $732.99</strong></p>
-
-        <img src="../marcas/adidas_verde.jpg" alt="zapo">
-        <h3>Zapatillas Samba adidas Originals - Verde adidas</h3>
-        <p>Oferta</p>
-        <p><strong>Precio: $273.99</strong></p>
-
-        <img src="../marcas/deportivas_adidas_negro.jpg" alt="zapo">
-        <h3>ZAPATILLAS RUNNING ADIDAS HOMBRE RUNFALCON 5.0</h3>
-        <p>Exclusive time</p>
-        <p><strong>Precio: $674.99</strong></p>
-    </div>
-
-        <div class="item">
-        <img src="../marcas/converse_botin.jpg" alt="zapo">
-        <h3>Converse Chuck 70 Vintage Canvas</h3>
-        <p>Oferta</p>
-        <p><strong>Precio: $185.99</strong></p>
-
-        <img src="../marcas/converse_log_verde.jpg" alt="zapo"> 
-        <h3>Zapatillas Converse Star Player 76 100% Original | A06112</h3>
-        <p>Oferta</p>
-        <p><strong>Precio: $354.99</strong></p>
-
-        <img src="../marcas/converse_plomo.jpg" alt="zapo"> 
-        <h3>Bambas Converse TOBIN A07510C Gris</h3>
-        <p>Exclusive time</p>
-        <p><strong>Precio: $621.99</strong></p>
-    </div>
-
-    <div class="item">
-        <img src="../marcas/nike_balnco_celeste.jpg" alt="zapo"> 
-        <h3>Zapatillas Air Force 1 LV8 Blancas - Foot on Mars</h3>
-        <p>Exclusive time</p>
-        <p><strong>Precio: $621.99</strong></p>
-
-        <img src="../marcas/nike_balnco_rosa.jpg" alt="zapo"> 
-        <h3>ZAPATILLAS W AIR FORCE 1 WILD</h3>
-        <p>Exclusive time</p>
-        <p><strong>Precio: $954.99</strong></p>
-
-        <img src="../marcas/nike_rosa.jpg" alt="zapo"> 
-        <h3>Zapatillas Mujer Nike Air Force 1 07 LX - InStore</h3>
-        <p>Exclusive time</p>
-        <p><strong>Precio: $635.99</strong></p>
-    </div>
-
-    <div class="item">
-        <img src="../marcas/puma_blanco_verde.jpg" alt="zapo">
-        <h3>Zapatilla Urbano Hombre Puma 24.395016</h3>
-        <p>Exclusive time</p>
-        <p><strong>Precio: $721.99</strong></p>
-
-        <img src="../marcas/puma_crema.jpg" alt="zapo"> 
-        <h3>Zapatillas PUMA HERITAGE PALERMO 11 - The Box</h3>
-        <p>Exclusive time</p>
-        <p><strong>Precio: $456.99</strong></p>
-
-        <img src="../marcas/puma_negro _blanco.jpg" alt="zapo"> 
-        <h3>Zapatillas Urbano Mujer Puma Caven 2.0</h3>
-        <p>Oferta</p>
-        <p><strong>Precio: $205.99</strong></p>
-    </div>
-
-    <div class="item">
-        <img src="../marcas/r18_blanco.jpg" alt="zapo"> 
-        <h3>Zapatillas Unisex R18 R18-QY026 (35-40) Blanco</h3>
-        <p>Exclusive time</p>
-        <p><strong>Precio: $653.99</strong></p>
-
-        <img src="../marcas/r18_blanco_verde.jpg" alt="zapo"> 
-        <h3>R18 - URBANO</h3>
-        <p>Oferta</p>
-        <p><strong>Precio: $357.99</strong></p>
-
-        <img src="../marcas/r18_depor_negro.jpg" alt="zapo"> 
-        <h3>R18 - RUNNING</h3>
-        <p>Oferta</p>
-        <p><strong>Precio: $159.99</strong></p>
-    </div>
-</section>
-<!--------------------------------------------------------------------------------->
-<section class= "iterable2">
-    <div class="imagenes3">
-        <img src="../marcas/adidas_blanco.jpg" alt="zapo2">
-        
-        
-        <img src="../marcas/adidas_verde.jpg" alt="zapo2">
-        
-        
-        <img src="../marcas/deportivas_adidas_negro.jpg" alt="zapo2">
-        
-        
-        <img src="../marcas/converse_botin.jpg" alt="zapo2">
-        
-        
-        <img src="../marcas/converse_plomo.jpg" alt="zapo2"> 
-        
-        
-        <img src="../marcas/converse_log_verde.jpg" alt="zapo2"> 
-        
-        
-        <img src="../marcas/nike_balnco_celeste.jpg" alt="zapo2"> 
-        
-        
-        <img src="../marcas/nike_balnco_rosa.jpg" alt="zapo2"> 
-        
-        
-        <img src="../marcas/nike_rosa.jpg" alt="zapo2"> 
-        
-        
-        <img src="../marcas/puma_blanco_verde.jpg" alt="zapo2">
-        
-        
-        <img src="../marcas/puma_crema.jpg" alt="zapo2"> 
-        
-        
-        <img src="../marcas/puma_negro _blanco.jpg" alt="zapo2"> 
-        
-        
-        <img src="../marcas/r18_blanco.jpg" alt="zapo2"> 
-        
-        
-        <img src="../marcas/r18_blanco_verde.jpg" alt="zapo2"> 
-        
-        
-        <img src="../marcas/r18_depor_negro.jpg" alt="zapo2"> 
-        
-    </div>
-</section>
-<!--------------------------------------------------------------------------------->
 <br>
+<section>
+<hr>
+    <!--<marquee>
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+        <img src="../html_web/marcas/LOGOBLCK.jpg" alt="zap">
+    </marquee>-->
+<hr>
+</section>
+</section>
+<!--
 <section class="video">
     <h2>Descrubre como prepramos nuestras zapatillas</h2>
     <iframe src="https://www.youtube.com/embed/AtACbhGGwK4?si=NZ_asybGTkuHylPT" title="proceso de zapatillas"></iframe>
+</section>-->
+<section class="registrate">
+    <h1>REGISTRATE Y RECIBE 20% DE DSCTO EN TU PRIMERA COMPRA
+    <strong>
+        <a href="registrate.html">REGISTRATE</a>
+    </strong>
+    </h1>
 </section>
-<!--------------------------------------------------------------------------------->
-<h2>TEXTO RELLENO</h2>
-<h4>La historia del HTML empieza en 1989 cuando el investigador Tim Berners-Lee lo inventa con el fin de compartir artículos científicos. La primera versión sólo contaba con 18 etiquetas para texto. Lo que lo hacía especial es que podía ligar varios documentos con el hipertexto. Todo esto se podía visualizar en un navegador llamado World Wide Web.
-
-
-Posteriormente surge el Internet Engineering Task Force. Esto se volvió tan relevante que surgió el World Wide Web Consortium (W3C) en 1993, un organismo que determinó las reglas para el HTML.  
-En 1996 llegó la versión HTML 3.2 la cual ha sido una de las más completas y que ha marcado la historia del HTML hasta nuestros días.
-Es importante mencionar que en este tiempo se utilizaba un navegador de nombre NSCA Mosaic. Posteriormente se lanzó la primera versión de Netscape, quien en unos cuantos meses era usado por la mayoría de los usuarios en internet. 
-En la evolución de internet jugaron un papel fundamental otros lenguajes de programación. La introducción de Java o JavaScript dio más forma a la segunda versión de HTML. Gracias a este lenguaje se podían implementar tablas, imágenes, tipografías e incluso colores. Posteriormente surgió el CSS (hojas de estilo en cascada) con el que se da estilo y forma a los textos. 
-En la tercera versión de HTML se incluyen las etiquetas específicas para los navegadores web como Internet Explorer. Sin embargo, esta decisión sólo causó caos y problemas. Por esta razón se decidió hacer un cambio hacia un estándar único. 
-En esta nueva versión se incluyeron etiquetas como <a>, <estilo>, <java> y <DIV>. Es así que en la versión HTML 4.0 se agregan los botones y el iFrame para poder tener sitios dentro de otros sitios. En 2014 se desarrolló la quinta versión de HTML. Esta actualización llegó con un sin fin de audios, vídeos e inputs.
-
-    
-¿QUÉ ES Y PARA QUÉ SIRVE HTML?
-Ahora que tenemos presenta la historia es importante saber qué es y para qué sirve el HTML. Este concepto debe sonarte muy familiar ya que es uno de los pilares básicos de cualquier sitio. Aunque ya te hemos dado una definición es un poco complicado tenerlo claro. 
-
-    
-Como te hemos comentado antes, el HTML es un lenguaje de programación. Pero para entender para qué sirve, es necesario tener claro qué son las etiquetas. Para ello imagínate que el sitio web es un cuento y las partes que tiene este cuento (planteamiento, nudo y desenlace) son las etiquetas. Estas etiquetas cumplirán una doble función:
-Ordenar nuestro sitio: crear una página web con lenguaje HTML te ayuda a establecer un orden. Elegir el gestor de contenidos adecuado puede ser también de gran ayuda.
-Permitir que los motores de búsqueda nos encuentren 
-Para identificarlas las etiquetas se deben colocar entre los siguientes caracteres: “<” y “>”. Ejemplo: <nombre de etiqueta>. Cuando queremos iniciar una etiqueta sólo debe seguirse esta regla. 
-Sin embargo, para una etiqueta de cierre es necesario introducir una diagonal (“/”) antes del texto. Ejemplo: </etiqueta de cierre>. Por otro lado tenemos el código HTML el cual debe iniciar con una etiqueta HTML.
-En el caso concreto de las imágenes debe colocarse el atributo “img src”. Este nos ayuda a indicar en dónde está alojada la imagen que vamos a mostrar. En este caso “x” es el enlace en donde se encuentra la foto.
-
-    
-CARACTERÍSTICAS DE HTML
-Una de las características de HTML es la forma en que se divide la información. Esto es por medio de dos grandes bloques: el elemento HTML o head y el cuerpo o contenido.
-En el elemento HTML se pueden incluir los siguientes casos: 
-Meta datos. Esta puede ser información que le dé contexto a la página. Por ejemplo, nos sirve para indicar el idioma. 
-Referencia a ficheros. Aquí deben ir todos aquellos recursos que requiera nuestro sitio. Un ejemplo puede ser JavaScript y archivos CSS.
-Scripts y estilos. En caso de que estos no sean incluidos en un fichero independiente se pueden incluir en la cabecera. 
-Por su parte, en el cuerpo está todo el contenido de nuestra página. Es decir, desde el texto, imágenes, videos e incluso enlaces. Lo importante aquí es que todos estos elementos deben estar estructurados en secciones y marcado de forma correcta. 
-El lenguaje HTML es un tema que puede traer mucha confusión, por ello te dejamos las respuesta a tres de las preguntas más frecuentes.
-
-    
-¿QUÉ ES UN ARCHIVO CON LA EXTENSIÓN HTML?
-Un archivo con la extensión HTML es un tipo de archivo de lenguaje de marcado estándar de un sitio web. Estos sólo contienen texto y referencias a otros archivos externos, como CSS o vídeos. 
-
-    
-¿CUÁL ES LA FUNCIÓN DE HTML?
-El HTML es utilizado para desarrollos web y la creación de sitios. Este se compone de ciertas etiquetas como hipervínculos, saltos de página y etiquetas de imágenes. Es ideal para utilizarlo en diferentes CMS, este debe ser elegido dependiendo las necesidades de la página, por ejemplo: Wix vs WordPress.
-
-    
-¿CUÁL ES EL OBJETIVO DE HTML?
-El HTML es un lenguaje de programación que permite mostrar archivos de forma estructurada. De igual forma permite incluir imágenes, gráficos, sonidos, vídeos y otro tipo de archivos multimedia.
-A la hora de crear un sitio web es fundamental el manejo del lenguaje HTML. En Serna Group contamos con un experto en diseño de páginas web en México. Consúltanos cualquier duda si necesitas una nueva página web o quieres hacer algún cambio en la tuya. Hoy más que nunca el internet tiene un papel fundamental en todas nuestras relaciones.
-</h4>
-
 <footer>
-    <p>&copy; 2025 la pizzeria | Todos los derechos reservados</p>
+    <!--colocamos el copyright-->
+    <p> &copy; 2025 FOOTSHOP - todos los derechos reservados </p>
 </footer>
+
 </body>
 </html>
