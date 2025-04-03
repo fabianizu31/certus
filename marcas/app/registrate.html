@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Regitro de Producto</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(247, 69, 69);
+            padding: 20px;
+        }
+        .form-container{
+            background-color: #ffc400;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h2{
+            text-align: center;
+            color: #333;
+        }
+        .nike{
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .nike-label{
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .nike input, .nike select, .nike textarea{
+            width: 100%;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+
+        }
+        .nike button{
+            background-color: rgb(93, 185, 7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .nike button:hover{
+            background-color: #ffc400;
+
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="form-container">
+        <h2>Formulario de Regitro de Producto</h2>
+    </div>
+    <form action="#" method="post">
+        <!--nombre del producto-->
+        <div class="nike">
+            <label for="producto">Nombre del producto</label> 
+            <input type="text" id="producto" name="producto" required>
+        </div>
+        <!--categoria del producto (combo box)-->
+        <div class="nike">
+            <label form="categoria">Categori del producto</label>
+            <select id="categoria" name="categoria" required>
+                <option value="seleccione">Seleccione</option>
+                <option value="seleccione">electronica</option>
+                <option value="seleccione">ropa</option>
+                <option value="seleccione">alimentos</option>
+                <option value="seleccione">hogar</option>
+            </select>
+        </div>
+
+        <!--descripcion de los productos-->
+        <div class="nike">
+            <label form="descripcion">Descripcion del producto</label>
+            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+        </div>
+
+        <!--precios-->
+        <div class="nike">
+            <label form="precio">Precio del producto</label>
+            <input type="number" id="precio" name="precio" min="0" required>
+        </div>
+
+        <!--disponibilidad-->
+        <div class="nike">
+            <label form="disponibilidad">Esta disponible?</label><br>
+            <input type="radio" id="no-disponible" name="disponibilidad" value="si"required> SI
+            <input type="radio" id="no-disponible" name="disponibilidad" value="no"required> NO
+        </div>
+
+        <!--porductos destacados-->
+        <div class="nike">
+            <label form="destacado">Es un producto destacado?</label>
+            <input type="checkbox" id="destacado" name="destacado">
+        </div>
+
+        <!--fecha de registro-->
+        <div class="nike">
+            <label form="fecha-registro">Fechas de registro</label>
+            <input type="date" id="fecha-registro" name="fecha-registro" required>
+        </div>
+
+        <!--imagen del producto-->
+        <div class="nike">
+            <label form="imagen">Subir imagen del producto</label>
+            <input type="file" id="imagen" name="imagen" accept="image/">
+        </div>
+
+        <!--boton de envio-->
+        <div class="nike">
+            <button type="submit">registrar producto</button> 
+        </div>
+    </form> 
+</body>
+</html>
