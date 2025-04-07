@@ -1,0 +1,82 @@
+/*estilos generales*/
+body{
+    /*establecer las fuentes del texto*/
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0; 
+    /*fondo griss y claro para el cuerpo*/
+    background-color: #f0f0f0;
+
+} 
+header{
+    /*vamos a insertar un fondo verde para la cabecera*/
+    background-color: #000000;
+    padding: 15px;
+    color: white;
+    /*usamos un flexbox para organizar los elementos*/
+    display: flex;
+    /*es un espacio netre el logo y la navegacion (nav)*/
+    justify-content: space-between;
+    /*alinia el logo y los enlaces verticalmente*/
+    align-items: center;
+}
+header.logo img{
+    width: 150px; /*tamaño del logo*/
+    height: auto;
+}
+nav ul{
+    /*elimina los puntos de la lista*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*muestra los elementos de la lista en fila*/
+    display: flex;
+}
+nav ul li{
+    /*espaciado entrrre los elementos de la lista*/
+    margin-left: 20px;
+}
+nav ul li a{
+    /*elimina el subrayado*/
+    text-decoration: none;
+    /*color al texto*/
+    color: white;
+    /*engruesa el texto*/
+    font-weight: bold;
+}
+
+content{
+    padding: 20px;
+}
+ .post{
+    /*vamos a agregar un fondo blanco para las publicaciones*/
+    background-color: white;
+    /*vamos a agregar bordes redondeados*/
+    border-radius: 10px;
+    /*una sombra*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    /**/
+ }
+
+button {
+    background-color: rgb(255, 0, 242);
+    font: white;
+    border: none;
+    /*espaciado interno del boton*/
+    padding: 10px 20px;
+    /*bordes redondeados*/
+    border-radius: 5px;
+    /*cambia el cursor al pasar por el boton*/
+    cursor: pointer;
+ }
+ button:hover{
+    background-color: #031cff;
+ }
+ footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+ }

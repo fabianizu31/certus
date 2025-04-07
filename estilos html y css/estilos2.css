@@ -1,0 +1,65 @@
+/*generales*/
+body{
+    /*establecer las fuentes del texto*/
+    font-family: 'Times New Roman', Times, serif;
+    /*color de fondo suave*/
+    background-color: #f0f0f0;
+    /*eliminamos el margin predeterminado*/
+    margin: 0;
+    /*eliminamos el padding predeterminado*/
+    padding: 0; 
+    display: flex;
+    /*centra el contenido e forma horizontal*/
+    justify-content: center;
+    /*centra el contenido e forma vertical*/
+    align-items: center;
+    /*hace que el body ocupe toda la altura  de la pantalla*/
+    height: 100lvh;
+} 
+/*contenerdor del formulario*/
+.form-container{
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    /*ancho fijo para el formulario*/
+    width: 300px;
+}
+/*estilos para los titulos*/
+h1{
+    text-align: center;
+    color: black;
+}
+/*estilos para las etiquetas de los campos*/
+label{
+    /*hacen que las etiquetas esten en lineas bloque*/
+    display: block;
+    /*ESPACIO ENTRE CADA ETIQUETA*/
+    margin-bottom: 5px;
+    color: #333;
+}
+/*estilos para los campos de entrada*/
+input[type="text"],
+input[type="email"],
+input[type="number"], select{
+    /*hace q los cmapos ocupen todo el ancho disponible*/
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/*estilos para el boton*/
+button{
+    background-color: rgb(51, 100, 2);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+button:hover{
+    background-color: #25a045;
+}
