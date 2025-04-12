@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Only CSS AVANZADO</title>
+    <link rel="stylesheet" href="relieve2.css">
+</head>
+<body>
+    <!--SE PROCEDE A CREAR CHECKBOX PARA CADA IMAGEN-->
+    <input type="checkbox" id="img1">
+    <input type="checkbox" id="img2">
+    <input type="checkbox" id="img3">
+    <input type="checkbox" id="img4">
+
+    <section class="galeria">
+        <label class="imagen" for="img1">
+            <img src="./imagenes/descarga.jpg" width="200px" height="200px" alt="jingu1">
+        </label>
+        <label class="imagen" for="img2">
+            <img src="./imagenes/descarga (1).jpg" width="200px" height="200px" alt="jingu2">
+        </label>
+        <label class="imagen" for="img3">
+            <img src="./imagenes/descarga (2).jpg" width="200px" height="200px" alt="jingu3">
+        </label>
+        <label class="imagen" for="img4">
+            <img src="./imagenes/descarga (3).jpg" width="200px" height="200px" alt="jingu4">
+        </label>
+    </section>
+
+    <!--SE PROCEDE A CREAR LOS MODALES-->
+    <!--MODAL 1-->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <label class="cerrar" for="img1">&times;</label>
+            <img src="./imagenes/descarga.jpg" alt="cazador1">
+            <h2>cazdor1</h2>
+            <p>imaginatelo animado1</p>
+        </div>
+    </div>
+
+    <!--MODAL 2-->
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <label class="cerrar" for="img2">&times;</label>
+            <img src="./imagenes/descarga (1).jpg" alt="cazador2">
+            <h2>cazdor2</h2>
+            <p>imaginatelo animado2</p>
+        </div>
+    </div>
+
+    <!--MODAL 3-->
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <label class="cerrar" for="img3">&times;</label>
+            <img src="./imagenes/descarga (2).jpg" alt="cazador3">
+            <h2>cazdor3</h2>
+            <p>imaginatelo animado3</p>
+        </div>
+    </div>
+
+    <!--MODAL 4-->
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <label class="cerrar" for="img4">&times;</label>
+            <img src="./imagenes/descarga (3).jpg" alt="cazador4">
+            <h2>cazdor4</h2>
+            <p>imaginatelo animado4</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
